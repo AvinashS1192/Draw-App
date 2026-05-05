@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #121212;
+  --color-brand-white: #ffffff;
+  --color-brand-accent: #a855f7;
+
+  --shadow-heavy: 4px 4px 0px 0px #000;
+  --shadow-heavy-hover: 2px 2px 0px 0px #000;
+
+  --spacing-13: 3.25rem;
+
+  --color-bg-primary: var(--color-brand-white);
+  --color-text-primary: var(--color-brand-black);
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+@utility bg-dot-grid {
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-color: var(--border-primary);
+  }
+}
+
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #121212;
+  --dot-color: rgba(0, 0, 0, 0.3);
+}
+
+.dark {
+  --bg-primary: #121212;
+  --text-primary: #ffffff;
+  --border-primary: #ffffff;
+  --dot-color: rgba(255, 255, 255, 0.5);
+}

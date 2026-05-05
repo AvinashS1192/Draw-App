@@ -1,0 +1,39 @@
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id  String   @id @default(uuid())
+  name String 
+  email String @unique
+  password String
+  rooms Room[]
+}
+
+model Room{
+  id String @id @default(uuid())
+  slug String 
+  userId String
+  user  User @relation(fields: [userId], references: [id],onDelete: Cascade)
+  elements Element[]
+}
+
+model Element {
+  id        String @id @default(cuid())
+  roomId   String
+  room     Room  @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  type      String 
+  x         Float
+  y         Float
+  width     Float
+  height    Float
+  properties Json 
+  order     Int    @default(0) 
+  @@index([roomId])
+}
