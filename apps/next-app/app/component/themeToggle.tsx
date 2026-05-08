@@ -37,7 +37,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 border-2 border-(--border-primary) shadow-[2px_2px_0px_0px_var(--border-primary)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all cursor-pointer bg-[var(--bg-primary)] text-[var(--text-primary)]"
+      className="p-2 border border-(--border-primary)  active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all cursor-pointer bg-[var(--bg-primary)] text-[var(--text-primary)]"
     >
       {isDark ? "🌙" : "☀️"}
     </button>

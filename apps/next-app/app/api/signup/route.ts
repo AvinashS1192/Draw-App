@@ -16,9 +16,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const existingUser = await prismaClient.user.findUnique({
+    const existingUser = await prismaClient.user.findFirst({
       where: { email },
     });
+
     if (existingUser) {
       return NextResponse.json(
         { error: "User with this email already exists" },
@@ -35,6 +36,7 @@ export async function POST(req: NextRequest) {
     });
     return NextResponse.json({ user: newUser }, { status: 201 });
   } catch (error) {
+    console.log(error);
     return NextResponse.json(
       { error: "An error occurred while creating the user" },
       { status: 500 },

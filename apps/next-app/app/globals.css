@@ -30,14 +30,14 @@
 }
 
 :root {
-  --bg-primary: #ffffff;
-  --text-primary: #121212;
-  --dot-color: rgba(0, 0, 0, 0.3);
+  --bg-primary: #d1d1d1;
+  --text-primary: #202020;
+  --dot-color: #0000004d;
 }
 
 .dark {
-  --bg-primary: #121212;
-  --text-primary: #ffffff;
-  --border-primary: #ffffff;
+  --bg-primary: #202020;
+  --text-primary: #c2c0c0;
+  --border-primary: #c2c0c0;
   --dot-color: rgba(255, 255, 255, 0.5);
 }

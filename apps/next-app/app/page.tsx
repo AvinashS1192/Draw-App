@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { NavBar } from "./component/NavBar";
 
 export default function LandingPage() {
   return (
     <main className="pt-24 min-h-screen  bg-dot-grid flex flex-col items-center">
+      <NavBar></NavBar>
       {/* Hero Section */}
       <section className="max-w-5xl w-full px-6 py-20 text-center flex flex-col items-center">
         <div className="inline-block px-4 py-1 border-2 border-black font-bold text-xs mb-6 uppercase tracking-widest bg-brand-accent/20">
@@ -30,22 +32,6 @@ export default function LandingPage() {
             VIEW DEMO
           </button>
         </div>
-
-        {/* Visual Teaser: The "Canvas Window" */}
-        {/* <div className="w-full aspect-video bg-[var(--bg-primary)] border-4 border-black shadow-heavy relative overflow-hidden group"> */}
-        {/* Subtle Sketchy Elements floating in background */}
-        {/* <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
-          <div className="w-48 h-48 border-4 border-black rotate-12 -translate-x-20"></div>
-          <div className="w-64 h-32 border-4 border-black -rotate-6 translate-x-20 rounded-full"></div>
-        </div>
-
-        {/* Central Play Button/Icon */}
-        {/* <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-brand-accent w-20 h-20 rounded-full border-4 border-black flex items-center justify-center shadow-heavy group-hover:scale-110 transition-transform">
-            <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-white border-b-[12px] border-b-transparent ml-2"></div>
-          </div>
-        </div>
-        </div> */}
       </section>
 
       {/* Feature Bento Grid (Brief) */}
